@@ -9,10 +9,6 @@ export const lightTheme = {
   export const darkTheme = {
     primaryColor: '#ff5500',
     secondaryColor: '#E2E2E2',
-    backgroundColor: 'red',
+    backgroundColor: '#333333',
     textColor: '#f8f9fa',
   };
-
-  export const appTheme = {
-
-  }

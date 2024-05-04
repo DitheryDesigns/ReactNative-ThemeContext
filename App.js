@@ -1,25 +1,25 @@
-import React from 'react';
-import {
-  StyleSheet,
-  View,
-  useWindowDimensions,
-} from 'react-native';
+import React from "react";
+import { StyleSheet, View, useWindowDimensions } from "react-native";
+import { ThemeProvider } from "./contexts/ThemeContext/ThemeContext";
+
+import SomeComponent from "./components/SomeComponent";
 
 export default function App() {
-  const {height} = useWindowDimensions();
+  const { height } = useWindowDimensions();
 
   return (
-    <View style={[styles.container, {height}, StyleSheet.absoluteFill]}>
-
-    </View>
+    <ThemeProvider>
+      <View style={[styles.container, { height }, StyleSheet.absoluteFill]}>
+        <SomeComponent />
+      </View>
+    </ThemeProvider>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
+    alignItems: "center",
+    justifyContent: "center",
+  },
 });
